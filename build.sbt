@@ -1,7 +1,8 @@
 name := "sqlshift"
 organization := "com.goibibo"
 version := "0.1"
-scalaVersion := "2.10.6"
+//scalaVersion := "2.10.6"
+scalaVersion := "2.11.8"
 logLevel := Level.Info
 
 resolvers ++= Seq(
@@ -11,7 +12,8 @@ resolvers ++= Seq(
     "S3" at "https://s3-ap-south-1.amazonaws.com/goibibo-libs/repo"
 )
 
-val sparkVersion = "1.6.0"
+//val sparkVersion = "1.6.0"
+val sparkVersion = "2.2.0"
 val awsSDKVersion = "1.10.22"
 val dockerItScalaVersion = "0.9.0"
 val scalaTestVersion = "3.0.1"

@@ -19,8 +19,9 @@ val dockerItScalaVersion = "0.9.0"
 val scalaTestVersion = "2.2.2"
 
 libraryDependencies ++= Seq(
+  "com.typesafe.scala-logging" %% "scala-logging" % "3.9.0",
   "com.github.scopt" %% "scopt" % "3.5.0",
-   "com.typesafe" % "config" % "1.3.1",
+     "com.typesafe" % "config" % "1.3.1",
     "mysql" % "mysql-connector-java" % "5.1.39",
     "org.apache.spark" %% "spark-core" % sparkVersion % Provided,
     "org.apache.spark" %% "spark-sql" % sparkVersion % Provided,

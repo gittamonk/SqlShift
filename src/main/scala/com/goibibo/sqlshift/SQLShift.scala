@@ -13,8 +13,8 @@ import com.goibibo.sqlshift.models.Params.AppParams
 import com.goibibo.sqlshift.models.{Configurations, Status}
 import com.goibibo.sqlshift.offsetmanagement.OffsetManager
 import com.goibibo.sqlshift.offsetmanagement.zookeeper.ZKOffsetManager
+import com.typesafe.scalalogging.{LazyLogging,Logger}
 import org.apache.spark.sql.{DataFrame, SQLContext}
-import org.slf4j.{Logger, LoggerFactory}
 import scopt.OptionParser
 
 import scala.collection.JavaConverters._
@@ -22,8 +22,9 @@ import scala.collection.JavaConverters._
 /**
   * Entry point to RDS to Redshift data pipeline
   */
-object SQLShift {
-    private val logger: Logger = LoggerFactory.getLogger(SQLShift.getClass)
+object SQLShift extends LazyLogging {
+  //  private val logger: Logger = LoggerFactory.getLogger(SQLShift.getClass)
+  override val logger = Logger(SQLShift.getClass())
     private val parser: OptionParser[AppParams] =
         new OptionParser[AppParams]("SQLShift") {
             head("MySQL to Redshift DataPipeline")
